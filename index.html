@@ -16,6 +16,7 @@
       content="Festivajan, studentenfestival, Gits, zomer, tickets, pintjes, DJ, Vader Jan"
     />
     <meta name="author" content="Vader Jan" />
+    <link rel="icon" type="image/png" href="images/Vader jan schild.png" />
   </head>
   <body>
     <!-- Hamburger menu knop (alleen zichtbaar op mobiel) -->
@@ -47,6 +48,7 @@
         />
         <a href="tickets.html" class="hero-button">Koop je ticket</a>
       </div>
+      <div id="countdown" class="countdown-box fancy"></div>
     </div>
 
     <!-- Scroll-content onder de hero -->
@@ -67,5 +69,31 @@
       <p>&copy; 2025 Vader Jan. Alle dommigheid voorbehouden.</p>
     </footer>
     <script src="hamburger.js"></script>
+    <script>
+      const countdown = document.getElementById("countdown");
+      const eventDate = new Date("August 9, 2025 18:00:00").getTime();
+      const icons = ["\u23F3", "\u2728", "\uD83C\uDF1F", "\uD83C\uDF89"];
+      let iconIndex = 0;
+
+      setInterval(() => {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        if (distance <= 0) {
+          countdown.innerHTML = "\uD83D\uDD25 Het is vandaag! \uD83D\uDD25";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+
+        const currentIcon = icons[iconIndex];
+        iconIndex = (iconIndex + 1) % icons.length;
+
+        countdown.innerHTML = `${currentIcon} ${days}d ${hours}u tot Festivajan!`;
+      }, 1500);
+    </script>
   </body>
 </html>

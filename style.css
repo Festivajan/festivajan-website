@@ -510,3 +510,36 @@ body.bedankt-page {
     padding: 12px 24px;
   }
 }
+
+.countdown-box {
+  margin-top: 20px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-box.fancy {
+  margin-top: 50px; /* Verplaatst het iets verder van de knop */
+  transform: translateY(0);
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: bold;
+  border-radius: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
