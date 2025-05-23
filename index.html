@@ -1,0 +1,62 @@
+<!-- /index.html aangepast voor titel en knop boven/onder schild -->
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festivajan 2025</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="hamburger.css" />
+  </head>
+  <body>
+    <!-- Hamburger menu knop (alleen zichtbaar op mobiel) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Navigatie bovenaan -->
+    <nav id="main-nav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="event.html">Over</a></li>
+        <li><a href="lineup.html">Line-up</a></li>
+        <li><a href="tickets.html">Tickets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero met titel, schild en knop -->
+    <div class="hero home-hero">
+      <div class="hero-overlay">
+        <h1 class="hero-title">Festivajan</h1>
+        <img
+          src="images/Vader jan schild.png"
+          alt="Vader Jan Logo"
+          class="logo centered-logo"
+        />
+        <a href="tickets.html" class="hero-button">Koop je ticket</a>
+      </div>
+    </div>
+
+    <!-- Scroll-content onder de hero -->
+    <main>
+      <section class="intro">
+        <h2>Welkom op hét festival van het jaar</h2>
+        <p>
+          Festivajan is een explosie van sfeer, zon, vrienden en bier. Denk
+          Parcidance maar dan nog beter. Met all-in drank, een DJ die knalt en
+          een vibe die je nergens anders vindt, is dit de plek waar je je zomer
+          aftrapt. Trek je zonnebril aan, neem je vrienden mee en beleef de
+          eerste editie samen met ons.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Vader Jan. Alle dommigheid voorbehouden.</p>
+    </footer>
+    <script src="hamburger.js"></script>
+  </body>
+</html>
