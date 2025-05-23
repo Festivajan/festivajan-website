@@ -1,0 +1,82 @@
+<!-- /tickets.html -->
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickets - Festivajan 2025</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="hamburger.css" />
+  </head>
+  <body>
+    <!-- Hamburger menu knop (alleen zichtbaar op mobiel) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Navigatie bovenaan -->
+    <nav id="main-nav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="event.html">Over</a></li>
+        <li><a href="lineup.html">Line-up</a></li>
+        <li><a href="tickets.html">Tickets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+      </div>
+    </header>
+
+    <main class="ticket-section">
+      <h2>Koop je ticket</h2>
+      <p>
+        Voor slechts <strong>&euro;?</strong> krijg je toegang tot het terrein
+        én all-in drank. Vul onderstaand formulier in en je bent erbij!
+      </p>
+
+      <form id="ticketForm">
+        <label for="name">Naam:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-mailadres:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="aantal">Aantal tickets:</label>
+        <input
+          type="number"
+          id="aantal"
+          name="aantal"
+          min="1"
+          max="10"
+          required
+        />
+
+        <button type="submit" class="button">Reserveer</button>
+      </form>
+
+      <p
+        id="confirmation"
+        style="display: none; color: green; font-weight: bold; margin-top: 20px"
+      >
+        ✅ Bedankt voor je reservatie! Je krijgt een bevestiging via e-mail.
+      </p>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Vader Jan. Kom op tijd, of je pint wordt warm.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("ticketForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("confirmation").style.display = "block";
+          this.reset();
+        });
+    </script>
+    <script src="hamburger.js"></script>
+  </body>
+</html>
