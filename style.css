@@ -421,3 +421,92 @@ footer {
     text-align: center;
   }
 }
+
+/* Bedankt-pagina */
+body.bedankt-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("images/Vader Jan groepsfoto.jpeg") center/cover no-repeat fixed;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.thankyou-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 700px;
+}
+
+.thankyou-container h1 {
+  font-size: 3rem;
+  color: #2c2c2c;
+}
+
+.thankyou-container p {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.thankyou-container img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+.thankyou-container a.button {
+  background: #2c2c2c;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.thankyou-container a.button:hover {
+  background: #1a1a1a;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  body.bedankt-page {
+    padding: 20px;
+    align-items: flex-start;
+    background-attachment: scroll;
+  }
+
+  .thankyou-container {
+    padding: 30px 20px;
+    border-radius: 12px;
+    margin-top: 40px;
+    max-width: 95%;
+  }
+
+  .thankyou-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .thankyou-container p {
+    font-size: 1.1rem;
+  }
+
+  .thankyou-container img {
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+
+  .thankyou-container a.button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+}
