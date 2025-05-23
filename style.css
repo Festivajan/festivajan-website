@@ -625,19 +625,30 @@ body.bedankt-page {
 }
 
 @media (max-width: 768px) {
+  .singles-page {
+    padding: 40px 10px;
+    margin: 60px 10px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+  }
+
   .profiles-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
   }
 
   .single-profile {
-    margin: 0 auto; /* zorgt voor horizontale centrering */
-    box-sizing: border-box;
     width: 100%;
     max-width: 400px;
+    margin: 20px auto;
     padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
   }
 
   .single-profile h2 {
@@ -660,5 +671,10 @@ body.bedankt-page {
   .singles-page p {
     font-size: 1rem;
     padding: 0 10px;
+  }
+
+  .back-button {
+    top: 10px;
+    left: 10px;
   }
 }
