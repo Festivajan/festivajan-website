@@ -626,12 +626,15 @@ body.bedankt-page {
 
 @media (max-width: 768px) {
   .profiles-container {
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0 10px;
   }
 
   .single-profile {
+    margin: 0 auto; /* zorgt voor horizontale centrering */
+    box-sizing: border-box;
     width: 100%;
     max-width: 400px;
     padding: 20px;
