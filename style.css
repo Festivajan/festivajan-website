@@ -543,3 +543,11 @@ body.bedankt-page {
     transform: scale(1);
   }
 }
+
+@media (max-width: 768px) {
+  .countdown-box.fancy {
+    font-size: 1.2rem;
+    padding: 10px 16px;
+    margin-top: 30px;
+  }
+}
