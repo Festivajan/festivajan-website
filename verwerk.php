@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $host = "sql200.infinityfree.com";
 $user = "if0_39063946";
 $pass = "ldkQJNjkstK9D";
