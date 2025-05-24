@@ -698,3 +698,26 @@ body.bedankt-page {
 .aanmeld-knop:hover {
   background-color: #ff85c1; /* Iets lichtere roze kleur bij hover */
 }
+
+.vrijgezel-check {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.ja-knop,
+.nee-knop {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #ff85c1;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.ja-knop:hover,
+.nee-knop:hover {
+  background: #ff85c1;
+}
