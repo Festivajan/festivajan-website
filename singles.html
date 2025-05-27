@@ -203,6 +203,56 @@
           👀 Bekijk de sympathisanten
         </a>
       </div>
+
+      <!-- Verbeterde layout: knop en select staan naast elkaar en knopstijl identiek aan andere roze knoppen -->
+      <div
+        class="aanmeld-knop-container"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+          flex-wrap: wrap;
+          margin-top: 10px;
+        "
+      >
+        <label for="geslacht" style="font-weight: bold; color: #333"
+          >Kies geslacht:</label
+        >
+        <select
+          name="geslacht"
+          id="geslacht"
+          required
+          style="
+            padding: 10px 14px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1rem;
+            background: white;
+          "
+        >
+          <option value="Man">Man</option>
+          <option value="Vrouw">Vrouw</option>
+        </select>
+
+        <form action="https://vaderjan.infy.uk/date_roulette.php" method="get">
+          <input type="hidden" name="geslacht" id="hiddenGeslacht" />
+          <button type="submit" class="aanmeld-knop">🎲 Date Roulette</button>
+        </form>
+      </div>
+
+      <script>
+        const select = document.getElementById("geslacht");
+        const hiddenInput = document.getElementById("hiddenGeslacht");
+
+        // Zorg dat bij verandering van de dropdown het verborgen inputveld wordt aangepast
+        select.addEventListener("change", function () {
+          hiddenInput.value = this.value;
+        });
+
+        // Initieel invullen op paginalaad
+        hiddenInput.value = select.value;
+      </script>
     </main>
 
     <footer>
